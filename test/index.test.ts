@@ -1,6 +1,8 @@
 import { test, assert } from "vitest"
-import { foo } from "../src"
+import AutoScraper from "../src"
 
 test("simple", () => {
-  assert.equal(foo, "foo")
+  const scraper = new AutoScraper("https://www.scrapethissite.com/pages/")
+  scraper.scrape()
+  assert.equal("foo", "foo")
 })
